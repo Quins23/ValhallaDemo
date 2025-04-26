@@ -1,0 +1,13 @@
+{
+    "name": "miniapp-webapp-dmz",
+    "version": "1.0.0",
+    "description": "Mini proyecto para Web App en Azure",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2"
+    }
+  }
+  

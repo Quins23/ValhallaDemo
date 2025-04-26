@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi WebApp DMZ</title>
+</head>
+<body>
+    <h1>🌟 Bienvenido a tu Web App en Azure 🌟</h1>
+    <p>Este es un sitio de prueba para conexión segura.</p>
+
+    <button onclick="testConnection()">Probar conexión a BD</button>
+    <p id="result"></p>
+
+    <script>
+      function testConnection() {
+        fetch('/test-db')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('result').innerText = data;
+          })
+          .catch(error => {
+            document.getElementById('result').innerText = '❌ Error en la conexión.';
+          });
+      }
+    </script>
+</body>
+</html>
